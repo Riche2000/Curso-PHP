@@ -49,9 +49,9 @@
     echo ++$x; //Aqio sale 12
     echo "<br>";
     echo $x--;  
-    echo "<br>";
-    echo $x;    
-    echo "<br>";
-    echo --$x; 
-    echo "<br>";
+    echo "<br>"; 
+    echo $x;     
+    echo "<br>"; 
+    echo --$x;  
+    echo "<br>"; 
 ?>
