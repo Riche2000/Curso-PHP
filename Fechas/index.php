@@ -27,7 +27,6 @@
 
 		echo "Fecha: " . date("l") . " " . date("d") . " de " . $mes[date("m")-1] . " de " . date("Y") . "<br>";
 		echo "Son las " . date("h:i:sa");
-		
 		?>
 	</div>
 </body>
