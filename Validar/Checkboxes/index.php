@@ -145,11 +145,11 @@
 
          <p>
          Lenguajes de programación <br>	
-			<input type="checkbox" name="lenguajes[]" value="php" <?php if(in_array("php", $lenguajes)) echo "checked"; ?>> PHP <br>
-			<input type="checkbox" name="lenguajes[]" value="js" <?php if(in_array("js", $lenguajes)) echo "checked"; ?>> Javascript <br>
-			<input type="checkbox" name="lenguajes[]" value="java" <?php if(in_array("java", $lenguajes)) echo "checked"; ?>> Java <br>
-			<input type="checkbox" name="lenguajes[]" value="swift" <?php if(in_array("swift", $lenguajes)) echo "checked"; ?>> Swift <br>
-			<input type="checkbox" name="lenguajes[]" value="py" <?php if(in_array("py", $lenguajes)) echo "checked"; ?>> Python <br>
+			<input type="checkbox" name="lenguajes[]" value="php" <?php if(in_array("php", $lenguajes)) echo "checked";?>> PHP <br>
+			<input type="checkbox" name="lenguajes[]" value="js" <?php if(in_array("js", $lenguajes)) echo "checked";?>> JavaScript <br>
+			<input type="checkbox" name="lenguajes[]" value="java" <?php if(in_array("java", $lenguajes)) echo "checked";?>> Java <br>
+			<input type="checkbox" name="lenguajes[]" value="swift" <?php if(in_array("swift", $lenguajes)) echo "checked";?>> Swift <br>
+			<input type="checkbox" name="lenguajes[]" value="py" <?php if(in_array("py", $lenguajes)) echo "checked";?>> Python <br>
          </p>
 		<p><input type="submit" value="Enviar datos"></p> 
 	</form>
