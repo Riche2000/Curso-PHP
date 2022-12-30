@@ -1,0 +1,46 @@
+Las llaves primarias nunca van a ser iguales en otros registros 
+CREATE
+CREATE TABLE registros
+
+INSERT
+INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `password`) VALUES ('3', 'Ricardo', 'Sanchez', 'password');
+
+SELECT
+SELECT (col1,col2,...) FROM <nombre tabla> Where xol = valor ORDER BY col;
+SELECT nombre FROM invitados;
+SELECT nombre FROM invitados WHERE nombre = 'Ricardo';
+SELECT * FROM invitados ORDER BY nombre;
+
+UPDATE
+UPDATE <nombre tabla> SET col = valor,col2 = col2 valor2,...,colN = valorN, WHERE condición;
+UPDATE invitados SET nombre = 'Alejandro' WHERE nombre = 'Luis';
+
+DELETE Solo elimina las filas o todo el contenido de la tabla
+DELETE FROM <nombre tabla> WHERE condición; 
+DELETE FROM invitados;
+DROP Elimina toda la tabla
+DROP TABLE <nombre tabla>;
+DROP TABLE invitados;
+TRUNCATE Solo elimina los datos de la tabla, no asociaciones, no triggers
+TRUNCATE TABLE <nombre tabla>;
+
+PRIMARY KEYS No pueden contener valores duplicados, su alcance es solo dentro de la tabla.
+CREATE TABLE <nombre tabla>(nombre_campo TIPO PRIMARY KEY,nombre_campo TIPO,...);
+
+FOREIGN KEYS Insertan llaves foraneas osea informacion de otras tablas externas
+CREATE TABLE <nombre tabla>(campo1 TIPO, campo2 TIPO, FOREIGN KEY nombre_fk(campo2) REFERENCES nombre_tabla(columna));
+
+CREATE TABLE registros(
+	id INT NOT NULL PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    evento_id INT NOT NULL,
+    
+    FOREIGN KEY fk_usuario_id(usuario_id)
+    REFERENCES usuarios(id),
+	
+    FOREIGN KEY fk_evento_id(evento_id)
+    REFERENCES eventos(id)
+);
+
+INNER JOIN se usa cuando hay una relacion entre dos tablas
+SELECT (col1,col2,...coln) FROM <tabla> INNER JOIN tabla2 ON tabla1.columna = tabla2.columna
