@@ -42,5 +42,23 @@ CREATE TABLE registros(
     REFERENCES eventos(id)
 );
 
-INNER JOIN se usa cuando hay una relacion entre dos tablas
+INNER JOIN se usa cuando hay una relacion entre dos tablas y se requiere obtener informacion de ambas
+
 SELECT (col1,col2,...coln) FROM <tabla> INNER JOIN tabla2 ON tabla1.columna = tabla2.columna
+SELECT * FROM registros 
+INNER JOIN usuarios 
+ON registros.usuario_id = usuarios.id;
+
+SELECT registros.id, usuarios.nombre, eventos.nombre FROM registros 
+INNER JOIN usuarios 
+ON registros.usuario_id = usuarios.id
+INNER JOIN eventos ON registros.evento_id = evento_id;
+
+para poner password en phpMyAdmin
+User account -> seleccionamos root localhost -> Editar privilegios -> change password
+
+En la carpeta phpmyadmin editamos el archivo config.inc.php y en la seccion /* Authentication type */ en password entre las comillas ponemos la contraseña previamente puesta
+
+
+
+
