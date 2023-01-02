@@ -31,7 +31,7 @@ FOREIGN KEYS Insertan llaves foraneas osea informacion de otras tablas externas
 CREATE TABLE <nombre tabla>(campo1 TIPO, campo2 TIPO, FOREIGN KEY nombre_fk(campo2) REFERENCES nombre_tabla(columna));
 
 CREATE TABLE registros(
-	id INT NOT NULL PRIMARY KEY,
+    id INT NOT NULL PRIMARY KEY,
     usuario_id INT NOT NULL,
     evento_id INT NOT NULL,
     
